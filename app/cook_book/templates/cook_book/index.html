@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<body>
+    {% if recipes %}
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+      </tr>
+      {% for recipe in recipes %}
+        <tr>
+            <td>{{ recipe.recipe__id }}</td>
+            <td>{{ recipe.recipe__title }}</td>
+        </tr>
+      {% endfor %}
+</table>
+
+    {% endif %}
+</body>
+</html>
